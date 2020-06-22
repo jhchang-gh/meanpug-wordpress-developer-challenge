@@ -1,0 +1,13 @@
+/* Theme Name: AirPnP */
+/**
+ Appendix:
+
+ 0. Tailwind Setup
+ */
+/** START: TAILWIND **/
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+/** END: TAILWIND **/

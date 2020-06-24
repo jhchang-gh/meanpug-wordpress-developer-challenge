@@ -18,6 +18,8 @@ I think we can all agree, you shouldn't judge a book by it's cover but by the st
 * A sane project structure
 * Any additional data structures you think might be relevant to a complete implementation
 
+More details in the [challenge directory](https://github.com/MeanPug/meanpug-wordpress-developer-challenge/tree/master/challenge-2)
+
 ### Challenge 3: Show us what you got
 For this challenge, you don't need to do _anything at all_. Ok, that's a bit misleading. What we want to see is the complete
 git history for one of your past projects. The full requirements are:

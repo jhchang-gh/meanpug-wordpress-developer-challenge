@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.7'
 
 services:
    db:
@@ -14,14 +14,28 @@ services:
        MYSQL_USER: wordpress
        MYSQL_PASSWORD: wordpress
 
+   static:
+    build:
+      dockerfile: docker/static/Dockerfile
+      context: .
+    command: ["run", "dev"]
+    volumes:
+      - ./webpack:/code/webpack
+      - ./gulpfile.js:/code/gulpfile.js
+      - ./tailwind.config.js:/code/tailwind.config.js
+      - ../challenge-2/theme:/code/theme
+
    wordpress:
      depends_on:
        - db
+       - static
      image: wordpress:latest
      volumes:
+       - wp_plugins:/var/www/html/wp-content/plugins
+       - ../theme/challenge-2/theme:/var/www/html/wp-content/themes/challenge-2-theme
+       - ./uploads:/var/www/html/wp-content/uploads
+       - ./server_config.ini:/usr/local/etc/php/conf.d/server_config.ini
        - ./wp:/var/www/html
-       - ./theme:/var/www/html/wp-content/themes/meanpug-challenge-2
-       - ./plugins:/var/www/html/wp-content/plugins
      ports:
        - "8000:80"
      restart: always
@@ -29,19 +43,7 @@ services:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
-       DEBUG: 1
-
-   static:
-     image: dev/meanpug-challenge-1-static
-     build:
-       context: .
-       dockerfile: docker/Dockerfile-static
-     volumes:
-       - ./gulpfile.js:/code/gulpfile.js
-       - ./package.json:/code/package.json
-       - ./tailwind.config.js:/code/tailwind.config.js
-       - ./theme/assets/:/code/theme/assets/
-       - ./theme/style.css:/code/theme/style.css
-     command: ["run", "dev"]
+       WP_ENVIRONMENT_TYPE: development
 volumes:
     db_data:
+    wp_plugins:

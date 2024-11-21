@@ -1,46 +1,57 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+# Table of Contents
 
-_s
-===
+1. [Installation and Configuration](#installation-and-configuration)
+2. [Known issues](#known-issues)
+3. [Parent theme](#parent-theme)
+4. [Compiling static assets](#compiling-assets)
+5. [Troubleshooting Common Issues](#troubleshooting-issues)
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+## [Installation and Configuration](#installation-and-configuration)
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+* Search/Ask for a `<NPM_TOKEN>` and `<COMPOSER_TOKEN>` which should be provided for each project individually
+* Create a `.npmrc.dev` file at the root of the project and populate it 
+```sh 
+    //registry.npmjs.org/:_authToken=<NPM_TOKEN>
+```
+* Run the following command to build images:
+```sh
+    docker-compose build --build-arg COMPOSER_USERNAME=token --build-arg COMPOSER_TOKEN=<COMPOSER_TOKEN>
+```
+* Once the images are built, run the services with:
+```sh
+    docker-compose up -d
+```
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A custom header implementation in `inc/custom-header.php` just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-Note: `.no-sidebar` styles are not automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+## [Known issues](#known-issues)
 
-Getting Started
----------------
+* On Windows environment, line endings need to be set to LF instead of CRLF in `install-composer.sh` file
 
-If you want to keep it simple, head over to https://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+> If you encounter some error during this process, please report it to your project manager.
 
-If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a five-step find and replace on the name in all the templates.
+## [Parent Theme Docs](#parent-theme)
+The MeanPug Legal PI Parent Theme is intended as a way to:
 
-1. Search for `'_s'` (inside single quotations) to capture the text domain.
-2. Search for `_s_` to capture all the function names.
-3. Search for `Text Domain: _s` in `style.css`.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
-5. Search for `_s-` to capture prefixed handles.
+* Standardize the content model across Personal Injury Law Firm clients
+* Abstract common/core blocks into a shared location
 
-OR
+Reference the [Parent Theme Documentation](https://github.com/MeanPug/meanpug-legal-pi-parent-theme) for information on the content types, core blocks, and
+JS libraries that ship, as well as general information on our guidelines for Wordpress Development and other DX topics.
 
-1. Search for: `'_s'` and replace with: `'megatherium-is-awesome'`
-2. Search for: `_s_` and replace with: `megatherium_is_awesome_`
-3. Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium-is-awesome` in `style.css`.
-4. Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium_is_Awesome</code>
-5. Search for: `_s-` and replace with: `megatherium-is-awesome-`
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+## [Compiling Static Assets](#compiling-assets)
+All our assets (js/css) are compiled inside a docker static container, so when you run `docker-compose up -d`, 
+all the changes you make are immediately compiled. Please check webpack configuration for entry points.
 
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
+## [Core Plugins](#core-plugins)
+Until we move to a more mature package dependency manager for the development pipeline (like composer), this section will 
+serve as a guide of the plugins we use for common tasks in development/prod.
 
-Good luck!
+* Menus - [Max Mega Menu](https://wordpress.org/plugins/megamenu/)
+* Forms - [Gravity Forms](https://docs.gravityforms.com/installation/)
+* SEO - [Yoast](https://yoast.com/)
+
+## [Troubleshooting Common Issues](#troubleshooting-issues)
+### Table of Contents (LWP_ToC) block is not showing up with shortcode usage
+For some reason, when an excerpt isn't set for the current post/page, the LWP_ToC shortcode fails to render a ToC. It
+works just fine in widget form, only in shortcode form does it fail. Additionally, disabling Yoast SEO fixes the issue.
+Short answer: Include an excerpt on all posts/pages that require a ToC.

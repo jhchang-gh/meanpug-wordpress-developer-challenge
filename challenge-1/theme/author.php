@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package mirror
+ * @package infra
  */
 
 get_header();
@@ -51,7 +51,7 @@ get_header();
             endwhile;
         ?>
             <div class="container py-4">
-                <?php mirror_load_more_button(); ?>
+                <?php inf_load_more_button(); ?>
             </div>
         <?php
         } else {

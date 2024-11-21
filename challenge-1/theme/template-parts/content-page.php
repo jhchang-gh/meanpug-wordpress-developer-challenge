@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package mirror
+ * @package infra
  */
 
 ?>
@@ -15,7 +15,7 @@
 		the_content();
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mirror' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'inf' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -28,7 +28,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'mirror' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'inf' ),
 						array(
 							'span' => array(
 								'class' => array(),

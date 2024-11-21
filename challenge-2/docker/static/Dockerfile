@@ -4,7 +4,7 @@ WORKDIR /code
 ARG npmfile=.npmrc.dev
 
 ADD package*.json ./
-ADD $npmfile ./.npmrc
+# ADD $npmfile ./.npmrc
 
 RUN npm install
 

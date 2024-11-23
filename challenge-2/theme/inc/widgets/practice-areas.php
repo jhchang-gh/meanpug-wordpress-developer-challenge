@@ -118,5 +118,5 @@ class inf_PracticeAreas_Widget extends WP_Widget
 }
 
 add_action('widgets_init', function () {
-  register_widget('GD_PracticeAreas_Widget');
+  register_widget('inf_PracticeAreas_Widget');
 });

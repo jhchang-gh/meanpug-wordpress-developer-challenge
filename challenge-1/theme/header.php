@@ -21,48 +21,137 @@
 
 <body <?php body_class(); ?>>
 
-<nav class="sticky bg-green inf-site-header z-20">
-    <div class="container flex items-center justify-between pt-8 pb-6">
-        <div class="w-48 lg:w-96">
-            <?php echo get_custom_logo() ?>
+<nav id="navbar" class="flex">
+    <div id="navbar-main" class="">
+        <div id="navbar-logo" class="">
+            <img src="" />
+        </div>
+        <div id="navbar-toggle" class="">
+            <a href="#" class="">Stays</a>
+            <a href="#" class="">Experiences</a>
+        </div>
+        <div id="navbar-menu" class="">
+            <a href="#" class="">Airbnb your home</a>
+            <a href="#" class=""><svg></svg></a>
+            <a href="#" class="">
+                <svg></svg>
+                <svg></svg>
+            </a>
+        </div>
+    </div>
+    <div id="navbar-search" class="">
+        <div class="">
+            <label></label>
+            <input />
         </div>
 
-        <!-- Desktop Nav -->
-        <div class="pl-12 items-center justify-end hidden lg:flex">
-            <div class="flex-grow">
-                <?php wp_nav_menu(array(
-                    'theme_location' => 'nav',
-                    'menu_class' => 'inf-menu inf-menu--nav',
-                )); ?>
-            </div>
-
-            <div class="pl-8 text-center font-sans text-white-shade">
-                <strong class="uppercase font-normal text-sm block tracking-widest"><?php _e('Free Call 24/7', 'inf') ?></strong>
-                <strong class="font-normal text-5xl block ps-link ps-link--square ps-link--square--white">
-                    
-                    <span class="inf-link--square__container">
-                        <a href="<?php echo $contact_phone['url'] ?>" class="inf-link--square__link">
-                            <?php echo $contact_phone['title'] ?>
-                        </a>
-                    </span>
-                </strong>
-            </div>
+        <div class="">
+            <label></label>
+            <input />
         </div>
 
-        <!-- Mobile Nav -->
-        <div class="xl:hidden">
-              <div class="flex items-center">
-                  <a href="<?php echo $contact_phone['url'] ?>">
-                        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/icons/ic-phone.svg' ?>" alt="<?php _e('Phone Icon', 'inf') ?>" class="w-7 mr-6"/>
-                  </a>
+        <div class="">
+            <label></label>
+            <input />
+        </div>
 
-                  <div class="xl:hidden relative">
-                      <?php wp_nav_menu(array(
-                        'theme_location' => 'mobile-nav',
-                        'menu_class' => "header-menu", // (string) CSS class to use for the ul element which forms the menu. Default 'menu'.
-                      )); ?>
-                  </div>
-            </div>
+        <div class="">
+            <label></label>
+            <input />
+        </div>
+
+        <button><svg></svg></button>
+    </div>
+    <div id="navbar-filters" class="">
+        <div id="navbar-filters-type" class="">
+            <?php
+
+            $filter_btns = [
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+                [
+                    'img'=>'',
+                    'link'=>'#',
+                    'label'=>'Cabins'
+                ],
+            ];
+
+            foreach($filter_btns as $fbtn){
+                get_template_part('template-parts/headers/filter-button',null,$fbtn);
+            }
+
+            ?>
+            
+        </div>
+        <div id="navbar-filters-popup" class="">
+            <a href="#" class="">
+                <svg></svg>
+                <span></span>
+            </a>
+        </div>
+        <div id="navbar-filters-tax" class="">
+            <a href="#" class="">
+                <span></span>
+                <input type="checkbox" value="" class="sr-only peer">
+            </a>
         </div>
     </div>
 </nav>

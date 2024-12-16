@@ -39,7 +39,7 @@
             <div class="pl-8 text-center font-sans text-white-shade">
                 <strong class="uppercase font-normal text-sm block tracking-widest"><?php _e('Free Call 24/7', 'inf') ?></strong>
                 <strong class="font-normal text-5xl block ps-link ps-link--square ps-link--square--white">
-                    <?php $contact_phone = get_field('contact_phone', 'option'); ?>
+                    
                     <span class="inf-link--square__container">
                         <a href="<?php echo $contact_phone['url'] ?>" class="inf-link--square__link">
                             <?php echo $contact_phone['title'] ?>

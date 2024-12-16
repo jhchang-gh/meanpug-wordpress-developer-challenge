@@ -1,8 +1,7 @@
-version: '3.7'
-
 services:
    db:
      image: mysql:5.7
+     platform: linux/amd64
      volumes:
        - db_data:/var/lib/mysql
      restart: always
@@ -30,6 +29,7 @@ services:
        - db
        - static
      image: wordpress:latest
+     platform: linux/amd64
      volumes:
        - wp_plugins:/var/www/html/wp-content/plugins
        - ./theme:/var/www/html/wp-content/themes/challenge-1-theme

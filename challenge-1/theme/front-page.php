@@ -26,6 +26,7 @@ get_header();
 				'avail_dates' => 'Jan 4 - 9',
 				'price' => '556',
 				'rating' => '5.0',
+				'favorite' => true
 			],
 			[
 				'img' => 'jeffersonville-new-york.avif',
@@ -34,6 +35,7 @@ get_header();
 				'avail_dates' => 'Feb 9 - 14',
 				'price' => '242',
 				'rating' => '4.98',
+				'favorite' => true
 			],
 			[
 				'img' => 'hamlin-pennsylvania.avif',
@@ -42,6 +44,7 @@ get_header();
 				'avail_dates' => 'Feb 2 - 7',
 				'price' => '300',
 				'rating' => '4.96',
+				'favorite' => false
 			],
 			[
 				'img' => 'litchfield-connecticut.avif',
@@ -50,6 +53,7 @@ get_header();
 				'avail_dates' => 'Dec 16 - 21',
 				'price' => '599',
 				'rating' => '4.96',
+				'favorite' => true
 			],
 			[
 				'img' => 'bedford-hills-new-york.avif',
@@ -58,6 +62,7 @@ get_header();
 				'avail_dates' => 'Jan 23 - 28',
 				'price' => '383',
 				'rating' => '5.0',
+				'favorite' => true
 			],
 			[
 				'img' => 'greenwood-lake-new-york.avif',
@@ -66,6 +71,7 @@ get_header();
 				'avail_dates' => 'Jan 12 - 17',
 				'price' => '295',
 				'rating' => '4.98',
+				'favorite' => true
 			],
 			[
 				'img' => 'greentown-pennsylvania.avif',
@@ -74,6 +80,7 @@ get_header();
 				'avail_dates' => 'Jan 12 - 17',
 				'price' => '279',
 				'rating' => '4.9',
+				'favorite' => true
 			],
 			[
 				'img' => 'shohola-pennsylvania.avif',
@@ -82,6 +89,7 @@ get_header();
 				'avail_dates' => 'Feb 16 - 21',
 				'price' => '206',
 				'rating' => '4.98',
+				'favorite' => true
 			],
 		];
 

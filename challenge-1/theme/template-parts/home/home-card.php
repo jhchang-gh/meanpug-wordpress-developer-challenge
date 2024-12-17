@@ -1,7 +1,7 @@
 
 <div class="home-card">
     <div class="home-card-image rounded-lg overflow-hidden min-h-[248px] relative bg-cover bg-center mb-1.5" style="background-image:url(<?php echo TEMPLATE_IMG_URI . $args['img'] ?>)">
-        <label class="home-card-image-gf absolute rounded-full bg-white px-2 py-1 inline-block top-4 left-3 text-sm">Guest favorite</label>
+        <?php if ($args['favorite']): ?><label class="home-card-image-gf absolute rounded-full bg-white px-2 py-1 inline-block top-4 left-3 text-sm">Guest favorite</label><?php endif; ?>
         <span class="absolute top-4 right-3"><?php echo get_inline_svg('heart.svg'); ?></span>
         <div class="absolute bottom-4 center left-1/2 -translate-x-1/2 flex items-center">
             <div class="rounded-full w-1.5 h-1.5 bg-white mx-0.5"></div>

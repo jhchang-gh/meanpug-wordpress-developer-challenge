@@ -89,6 +89,8 @@ if ( ! function_exists( 'inf_setup' ) ) :
     * add_image_size('attorney-headshot-square', 720, 720 );
     * add_image_size('attorney-headshot-tall', 600, 625 );
     */
+	define('TEMPLATE_IMG_URI', get_template_directory_uri() . '/assets/images/');
+
 	}
 endif;
 add_action( 'after_setup_theme', 'inf_setup' );
@@ -224,3 +226,14 @@ require_once __DIR__ . '/inc/widgets/all.php';
 require_once __DIR__ . '/inc/modules/all.php';
 require_once __DIR__ . '/inc/utils/all.php';
 require_once __DIR__ . '/inc/services/all.php';
+
+
+function get_inline_svg($filename) {
+    $file_path = get_template_directory() . '/assets/images/' . $filename;
+
+    if (file_exists($file_path)) {
+        return file_get_contents($file_path);
+    } else {
+        return '<!-- SVG not found: ' . esc_html($filename) . ' -->';
+    }
+}

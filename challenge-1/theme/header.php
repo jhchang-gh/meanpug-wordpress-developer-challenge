@@ -24,7 +24,7 @@
 <nav id="navbar" class="flex">
     <div id="navbar-main" class="">
         <div id="navbar-logo" class="">
-            <img src="" />
+            <?php echo get_inline_svg('logo.svg'); ?>
         </div>
         <div id="navbar-toggle" class="">
             <a href="#" class="">Stays</a>
@@ -32,10 +32,10 @@
         </div>
         <div id="navbar-menu" class="">
             <a href="#" class="">Airbnb your home</a>
-            <a href="#" class=""><svg></svg></a>
+            <a href="#" class=""><?php echo get_inline_svg('globe.svg') ?></a>
             <a href="#" class="">
-                <svg></svg>
-                <svg></svg>
+                <?php echo get_inline_svg('menu.svg') ?>
+                <?php echo get_inline_svg('user.svg') ?>
             </a>
         </div>
     </div>
@@ -68,69 +68,69 @@
 
             $filter_btns = [
                 [
-                    'img'=>'',
+                    'img'=>'cabins.jpg',
                     'link'=>'#',
                     'label'=>'Cabins'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'icons.webp',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Icons'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'amazing-views.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Amazing Views'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'tiny-homes.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Tiny homes'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'pools.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Amazing pools'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'golf.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Golfing'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'lakefront.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Lakefront'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'mansion.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Mansions'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'omg.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'OMG!'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'treehouse.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Treehouses'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'a-frame.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'A-frames'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'countryside.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Countryside'
                 ],
                 [
-                    'img'=>'',
+                    'img'=>'beachfront.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Beachfront'
                 ],
             ];
 

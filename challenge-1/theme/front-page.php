@@ -19,7 +19,7 @@ get_header();
 
 		$home_data = [
 			[
-				'img' => '',
+				'img' => 'bethlehem-connecticut.avif',
 				'location' => 'Bethlehem, Connecticut',
 				'distance' => '75',
 				'avail_dates' => 'Jan 4 - 9',
@@ -27,7 +27,7 @@ get_header();
 				'rating' => '5.0',
 			],
 			[
-				'img' => '',
+				'img' => 'jeffersonville-new-york.avif',
 				'location' => 'Jeffersonville, New York',
 				'distance' => '86',
 				'avail_dates' => 'Feb 9 - 14',
@@ -35,7 +35,7 @@ get_header();
 				'rating' => '4.98',
 			],
 			[
-				'img' => '',
+				'img' => 'hamlin-pennsylvania.avif',
 				'location' => 'Hamlin, Pennsylvania',
 				'distance' => '85',
 				'avail_dates' => 'Feb 2 - 7',
@@ -43,7 +43,7 @@ get_header();
 				'rating' => '4.96',
 			],
 			[
-				'img' => '',
+				'img' => 'litchfield-connecticut.avif',
 				'location' => 'Litchfield, Connecticut',
 				'distance' => '80',
 				'avail_dates' => 'Dec 16 - 21',

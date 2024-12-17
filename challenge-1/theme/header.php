@@ -35,7 +35,10 @@
             <a href="#" class="p-3"><?php echo get_inline_svg('globe.svg') ?></a>
             <a href="#" class="flex border-[#dddddd] border rounded-full py-2 pr-2 pl-[14px] ml-3 items-center">
                 <span><?php echo get_inline_svg('menu.svg') ?></span>
-                <span class="text-[#6A6A6A] w-8 inline-block ml-[14px]"><?php echo get_inline_svg('user.svg') ?></span>
+                <span class="text-[#6A6A6A] w-8 inline-block ml-[14px]">
+                    <?php // echo get_inline_svg('user.svg') ?>
+                    <img src="<?php echo TEMPLATE_IMG_URI . 'meanpug.png' ?>" />
+                </span>
             </a>
         </div>
     </div>

@@ -15,8 +15,12 @@
 </div>
 <!-- #page -->
 
+<div class="fixed left-1/2 -translate-x-1/2 bottom-8 bg-[#222222] rounded-full px-4 py-3 flex items-center">
+    <span class="mr-2 text-sm text-white">Show map</span>
+    <?php echo get_inline_svg('map.svg'); ?>
+</div>
+
 <?php wp_footer(); ?>
 
-</main>
 </body>
 </html>

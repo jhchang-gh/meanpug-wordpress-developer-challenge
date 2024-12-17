@@ -20,10 +20,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-<main class="">
-<nav id="navbar" class="flex flex-col">
+<nav id="navbar" class="flex flex-col mb-4">
     <div class="w-full max-w-[1200px] px-10 mx-auto">
-    <div id="navbar-main" class="flex items-center w-full ">
+    <div id="navbar-main" class="flex items-center w-full mb-6">
         <div id="navbar-main-logo" class="text-[#FF385C] mr-auto">
             <?php echo get_inline_svg('logo.svg'); ?>
         </div>
@@ -40,7 +39,7 @@
             </a>
         </div>
     </div>
-    <div id="navbar-search" class="flex rounded-full border border-[#dddddd] py-2 pl-8 pr-2 items-center w-full max-w-[850px] mx-auto">
+    <div id="navbar-search" class="flex rounded-full border border-[#dddddd] py-2 pl-8 pr-2 items-center w-full max-w-[850px] mx-auto mb-5">
         <div class="flex flex-col py-1.5 w-[30%]">
             <label class="font-medium text-xs">Where</label>
             <input type="text" placeholder="Search destinations" class="text-sm font-light" />
@@ -65,8 +64,8 @@
     </div>
     </div>
     <div class="w-full h-[1px] bg-[#dddddd]"></div>
-    <div id="navbar-filters" class="w-full max-w-[1200px] px-10 mx-auto relative">
-        <div id="navbar-filters-type" class="flex overflow-hidden w-full justify-between">
+    <div id="navbar-filters" class="w-full max-w-[1200px] px-10 mx-auto relative mt-4 overflow-hidden">
+        <div id="navbar-filters-type" class="overflow-hidden flex justify-between w-[1200px]">
             <?php
 
             $filter_btns = [
@@ -159,13 +158,15 @@
             ?>
             
         </div>
-        <div id="navbar-filters-overlay" class="absolute top-0 right-10 h-full flex items-center w-fit" style="background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%);">
-            <a href="#" class="">
+        <div id="navbar-filters-overlay" class="absolute top-0 right-0 h-full flex items-center w-fit pl-8 pr-10" style="background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);">
+            <a href="#" class="rounded-full p-2 border border-[#dddddd]">
                 <?php echo get_inline_svg('chevron-right.svg'); ?>
             </a>
-            <a href="#" class="flex">
-                <?php echo get_inline_svg('filters.svg'); ?>
-                <span>Filters</span>
+            <a href="#" class="flex items-center rounded-lg px-2 py-3 border border-[#dddddd] ml-4">
+                <span class="">
+                    <?php echo get_inline_svg('filters.svg'); ?>
+                </span>
+                <span class="ml-2 text-small">Filters</span>
             </a>
         </div>
     </div>

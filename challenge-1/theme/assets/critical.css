@@ -10,6 +10,6 @@
 body{
     font-family:Airbnb Cereal VF, Circular, -apple-system, BlinkMacSystemFont, Roboto,       Helvetica Neue, sans-serif
 }
-#navbar-search{
+#navbar-search, .home-card-image-gf{
     box-shadow: 0 3px 12px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.08);
 }

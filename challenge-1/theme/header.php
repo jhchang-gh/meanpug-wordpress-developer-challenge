@@ -9,6 +9,15 @@
  * @package infra
  */
 
+/* 
+Note from  Jeff:
+
+Header and navbar with no working buttons, hover or animation effects
+If this was for an actual build, would be doing a lot differently
+No mobile optimization
+
+*/
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -36,8 +45,14 @@
             <a href="#" class="flex border-[#dddddd] border rounded-full py-2 pr-2 pl-[14px] ml-3 items-center">
                 <span><?php echo get_inline_svg('menu.svg') ?></span>
                 <span class="text-[#6A6A6A] w-8 inline-block ml-[14px]">
-                    <?php // echo get_inline_svg('user.svg') ?>
-                    <img src="<?php echo TEMPLATE_IMG_URI . 'meanpug.png' ?>" />
+                    <?php 
+                    // Original line before meanpug insertion
+
+                    // echo get_inline_svg('user.svg') 
+
+                    // Below is meanpug insertion
+                    ?>
+                    <img src="<?php echo TEMPLATE_IMG_URI . 'meanpug.png' ?>" alt="A cutie patootie" />
                 </span>
             </a>
         </div>
@@ -71,6 +86,9 @@
         <div id="navbar-filters-type" class="overflow-hidden flex justify-between w-[1200px]">
             <?php
 
+            // declare '$filter_btns' variable to feed into 'home-card.php' template part
+            // if this was a real Wordpress site, I'd be making a query to custom taxonomy 'attractions'
+            
             $filter_btns = [
                 [
                     'img'=>'cabins.jpg',

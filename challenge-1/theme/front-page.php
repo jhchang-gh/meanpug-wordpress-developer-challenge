@@ -12,11 +12,20 @@
  * @package infra
  */
 
+/*
+
+Front page with bare bones grid displaying homes
+
+*/
+
 get_header();
 ?>
 <main class="w-full max-w-[1200px] px-10 mx-auto">
 	<div id="grid-homes" class="grid grid-cols-4 gap-5">
 		<?php
+
+		// declare '$home_data' variable to feed into 'home-card.php' template part
+		// if this was a real Wordpress site, I'd be making a query to custom post type 'properties'
 
 		$home_data = [
 			[

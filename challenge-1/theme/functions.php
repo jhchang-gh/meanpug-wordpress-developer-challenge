@@ -89,6 +89,10 @@ if ( ! function_exists( 'inf_setup' ) ) :
     * add_image_size('attorney-headshot-square', 720, 720 );
     * add_image_size('attorney-headshot-tall', 600, 625 );
     */
+
+	/* 
+	Define custom variable to easily refer to images in library
+	*/
 	define('TEMPLATE_IMG_URI', get_template_directory_uri() . '/assets/images/');
 
 	}
@@ -227,7 +231,9 @@ require_once __DIR__ . '/inc/modules/all.php';
 require_once __DIR__ . '/inc/utils/all.php';
 require_once __DIR__ . '/inc/services/all.php';
 
-
+/* 
+Custom function to call inline svg from library
+*/
 function get_inline_svg($filename) {
     $file_path = get_template_directory() . '/assets/images/' . $filename;
 

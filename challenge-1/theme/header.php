@@ -10,11 +10,10 @@
  */
 
 /* 
-Note from  Jeff:
-
 Header and navbar with no working buttons, hover or animation effects
 If this was for an actual build, would be doing a lot differently
 No mobile optimization
+- Jeff C
 
 */
 

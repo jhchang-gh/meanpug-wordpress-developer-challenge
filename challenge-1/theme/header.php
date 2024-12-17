@@ -20,9 +20,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<main class="max-w-[1120px] px-10 xl:px-20 mx-auto">
+<main class="">
 <nav id="navbar" class="flex flex-col">
-    <div id="navbar-main" class="flex items-center w-full">
+    <div class="w-full max-w-[1200px] px-10 mx-auto">
+    <div id="navbar-main" class="flex items-center w-full ">
         <div id="navbar-main-logo" class="text-[#FF385C] mr-auto">
             <?php echo get_inline_svg('logo.svg'); ?>
         </div>
@@ -62,76 +63,93 @@
 
         <button class="flex rounded-full bg-[#e1385c] text-white p-4 items-center ml-auto"><?php echo get_inline_svg('search.svg') ?></button>
     </div>
-    <div id="navbar-filters" class="">
-        <div id="navbar-filters-type" class="">
+    </div>
+    <div class="w-full h-[1px] bg-[#dddddd]"></div>
+    <div id="navbar-filters" class="w-full max-w-[1200px] px-10 mx-auto relative">
+        <div id="navbar-filters-type" class="flex overflow-hidden w-full justify-between">
             <?php
 
             $filter_btns = [
                 [
                     'img'=>'cabins.jpg',
                     'link'=>'#',
-                    'label'=>'Cabins'
+                    'label'=>'Cabins',
+                    'active'=>true
                 ],
                 [
                     'img'=>'icons.webp',
                     'link'=>'#',
-                    'label'=>'Icons'
+                    'label'=>'Icons',
+                    'active'=>false
                 ],
                 [
                     'img'=>'amazing-views.jpg',
                     'link'=>'#',
-                    'label'=>'Amazing Views'
+                    'label'=>'Amazing Views',
+                    'active'=>false
                 ],
                 [
                     'img'=>'tiny-homes.jpg',
                     'link'=>'#',
-                    'label'=>'Tiny homes'
+                    'label'=>'Tiny homes',
+                    'active'=>false
                 ],
                 [
                     'img'=>'pools.jpg',
                     'link'=>'#',
-                    'label'=>'Amazing pools'
+                    'label'=>'Amazing pools',
+                    'active'=>false
                 ],
                 [
                     'img'=>'golf.jpg',
                     'link'=>'#',
-                    'label'=>'Golfing'
+                    'label'=>'Golfing',
+                    'active'=>false
                 ],
                 [
                     'img'=>'lakefront.jpg',
                     'link'=>'#',
-                    'label'=>'Lakefront'
+                    'label'=>'Lakefront',
+                    'active'=>false
                 ],
                 [
                     'img'=>'mansion.jpg',
                     'link'=>'#',
-                    'label'=>'Mansions'
+                    'label'=>'Mansions',
+                    'active'=>false
                 ],
                 [
                     'img'=>'omg.jpg',
                     'link'=>'#',
-                    'label'=>'OMG!'
+                    'label'=>'OMG!',
+                    'active'=>false
                 ],
                 [
                     'img'=>'treehouse.jpg',
                     'link'=>'#',
-                    'label'=>'Treehouses'
+                    'label'=>'Treehouses',
+                    'active'=>false
                 ],
                 [
                     'img'=>'a-frame.jpg',
                     'link'=>'#',
-                    'label'=>'A-frames'
+                    'label'=>'A-frames',
+                    'active'=>false
                 ],
+                /*
                 [
                     'img'=>'countryside.jpg',
                     'link'=>'#',
-                    'label'=>'Countryside'
+                    'label'=>'Countryside',
+                    'active'=>false
                 ],
                 [
                     'img'=>'beachfront.jpg',
                     'link'=>'#',
-                    'label'=>'Beachfront'
+                    'label'=>'Beachfront',
+                    'active'=>false
                 ],
+                */
             ];
 
             foreach($filter_btns as $fbtn){
@@ -141,16 +159,13 @@
             ?>
             
         </div>
-        <div id="navbar-filters-popup" class="">
+        <div id="navbar-filters-overlay" class="absolute top-0 right-10 h-full flex items-center w-fit" style="background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%);">
             <a href="#" class="">
-                <svg></svg>
-                <span></span>
+                <?php echo get_inline_svg('chevron-right.svg'); ?>
             </a>
-        </div>
-        <div id="navbar-filters-tax" class="">
-            <a href="#" class="">
-                <span></span>
-                <input type="checkbox" value="" class="sr-only peer">
+            <a href="#" class="flex">
+                <?php echo get_inline_svg('filters.svg'); ?>
+                <span>Filters</span>
             </a>
         </div>
     </div>

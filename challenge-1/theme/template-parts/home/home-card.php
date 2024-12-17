@@ -1,5 +1,5 @@
 
-<div class="home-card ">
+<div class="home-card">
     <div class="home-card-image" style="background-image:url(<?php echo TEMPLATE_IMG_URI . $args['img'] ?>)">
         <label>Guest favorite</label>
         <?php echo get_inline_svg('heart.svg'); ?>

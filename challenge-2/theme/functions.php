@@ -224,17 +224,3 @@ require_once __DIR__ . '/inc/widgets/all.php';
 require_once __DIR__ . '/inc/modules/all.php';
 require_once __DIR__ . '/inc/utils/all.php';
 require_once __DIR__ . '/inc/services/all.php';
-
-//require custom post types
-
-get_template_part('/inc/cpt/class-pug-post-type');
-// Post Type (post-type:article).
-get_template_part('/inc/cpt/class-pug-post-type-article');
-// Post Type (post-type:attorney).
-get_template_part('/inc/cpt/class-pug-post-type-attorney');
-// Post Type (post-type:case).
-get_template_part('/inc/cpt/class-pug-post-type-case');
-// Post Type (post-type:location).
-get_template_part('/inc/cpt/class-pug-post-type-location');
-// Post Type (post-type:practice-area).
-get_template_part('/inc/cpt/class-pug-post-type-practice-area');
